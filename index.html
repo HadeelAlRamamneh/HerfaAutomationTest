@@ -1,0 +1,991 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title></title>
+  <link rel="apple-touch-icon" href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@3da944e596e81f10ac6c1042c792af8a5a741023/commons/img/logo.png">
+  <link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@3da944e596e81f10ac6c1042c792af8a5a741023/commons/img/logo.png">
+  <link href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@8539670db814bf19a0ddbe9a6d19058aea0cf981/spark/css/spark-style.css" rel="stylesheet" />
+  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <style> </style>
+</head>
+<script src="https://cdn.rawgit.com/extent-framework/extent-github-cdn/7cc78ce/spark/js/jsontree.js"></script>
+<body class="spa ">
+    <div class="app header-dark side-nav-folded">
+        <div class="layout">
+            <div class="header navbar">
+    <div class="header-container">
+        <div class="nav-logo">
+          <a href="index.html">
+            <div class="logo logo-dark" style="background-image: url('https://cdn.rawgit.com/extent-framework/extent-github-cdn/d74480e/commons/img/logo.png')"></div>
+            <div class="logo logo-white" style="background-image: url('https://cdn.rawgit.com/extent-framework/extent-github-cdn/d74480e/commons/img/logo.png')"></div>
+          </a>
+        </div>
+        <ul class="nav-left">
+          <li>
+            <a class="sidenav-fold-toggler" href="javascript:void(0);">
+              <i class="fa fa-bars"></i>
+            </a>
+            <a class="sidenav-expand-toggler" href="javascript:void(0);">
+              <i class="fa fa-bars"></i>
+            </a>
+          </li>
+          <li class="search-box">
+            <a class="search-toggle" href="javascript:void(0);">
+              <i class="search-icon fa fa-search"></i>
+              <i class="search-icon-close fa fa-close"></i>
+            </a>
+          </li>
+          <li class="search-input">
+            <input id="search-tests" class="form-control" type="text" placeholder="Type to search...">
+          </li>
+        </ul>
+        <ul class="nav-right">
+          <li class="m-r-10">
+            <a href="#">
+              <span class="badge badge-primary"></span>
+            </a>
+          </li>
+            <li class="m-r-10">
+                <a href="#">
+                    <span class="badge badge-primary">10/2/2024 9:15:43 PM</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>
+            <div class="side-nav side-nav-folded">
+  <div class="side-nav-inner">
+    <ul class="side-nav-menu scrollable">
+      <li class="nav-item dropdown" onclick="toggleView('test-view')">
+        <a id="nav-test" class="dropdown-toggle" href="index.html">
+          <span class="icon-holder">
+            <i class="fa fa-align-left"></i>
+          </span>
+          <span class="title">Tests</span>
+        </a>
+      </li>
+            <li class="nav-item dropdown" onclick="toggleView('dashboard-view')">
+        <a id="nav-dashboard" class="dropdown-toggle" href="dashboard.html">
+          <span class="icon-holder">
+            <i class="fa fa-bar-chart"></i>
+          </span>
+          <span class="title">Dashboard</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+  <div class="side-nav-controls">
+    <ul>
+      <li>
+        <a href="#" class="lightsout" style="color:#8a8a8a;">
+          <i class="fa fa-desktop"></i>"</a>
+      </li>
+    </ul>
+  </div>
+</div>
+
+            <div class="page-container">
+                <div class="main-content">
+                    <div class="test-wrapper row test-view">
+    <div class="test-list">
+        <div class="test-list-tools">
+            <ul class="tools pull-left">
+                <li>
+                    <a href="">
+                        <span class="font-size-14">Tests</span>
+                    </a>
+                </li> 
+            </ul>
+            <ul class="tools text-right">
+				<li class="user-profile dropdown dropdown-animated scale-left">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+						<i class="fa fa-exclamation-circle"></i>
+					</a>
+					<ul id="status-toggle" class="dropdown-menu dropdown-md p-v-0">
+<a status="pass" class="dropdown-item" href="#"><span>Pass</span><span class="status success pull-right"></span></a>						<a status="fail" class="dropdown-item" href="#"><span>Fail</span><span class="status danger pull-right"></span></a>																														<div class="dropdown-divider"></div>
+						<a status="clear" class="dropdown-item" href="#"><span>Clear</span><span class="pull-right"><i class="fa fa-close"></i></span></a>
+					</ul>
+				</li>
+								            </ul>
+        </div>
+        <div class="test-list-wrapper scrollable">
+            <ul class="test-list-item">
+					<li class="test-item" status="fail" author="" device="" tag="" test-id="1"> 
+						<div class="status-avatar fail-bg">
+							<i class="fa fa-times text-white"></i>
+						</div>
+						<div class="open-test">
+							<div class="test-detail"> 
+								<p class="name">InvalidContactUs_EmptyEmailField</p> 
+								<p class="duration text-sm">0h:0m:12s+831ms</p> 
+								<span class="datetime">21:15:46 PM</span>
+							</div>
+						</div>
+						<div class="test-contents d-none">
+							<div class="detail-head">
+								<div class="p-v-10 d-inline-block">	
+									<div class="info">
+										<h5 class="test-status text-fail">InvalidContactUs_EmptyEmailField</h5>
+										<span class='badge badge-success'>10/2/2024 9:15:46 PM</span>
+										<span class='badge badge-danger'>10/2/2024 9:15:58 PM</span>
+										<span class='badge badge-default'>0h:0m:12s+831ms</span>
+									</div>
+																		<div class="m-t-10 m-l-5">
+										verify that on passing empty email   to contact form
+									</div>
+								</div>
+							</div>
+<div class="detail-body mt-4">												
+	
+<table class="table table-sm">
+	<thead><tr>
+		<th class="status-col">Status</th>
+		<th class="timestamp-col">Timestamp</th>
+		<th class="details-col">Details</th>
+	</tr></thead>
+	<tbody>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>21:15:47</td>
+				<td>
+Navigate Successfully									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>21:15:48</td>
+				<td>
+readExcel Successfully									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>21:15:56</td>
+				<td>
+FillForm Successfully									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-times text-fail"></i></td>
+				<td>21:15:58</td>
+				<td>
+Assert.IsFalse failed.									</td>
+			</tr>
+	</tbody>
+</table>
+
+</div>    
+<img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='C:\Users\HP\Desktop\ScreenShots\fff9a05b-3f6e-4923-bb15-dd8a33f00ed4_image.png' src='C:\Users\HP\Desktop\ScreenShots\fff9a05b-3f6e-4923-bb15-dd8a33f00ed4_image.png' data-src='C:\Users\HP\Desktop\ScreenShots\fff9a05b-3f6e-4923-bb15-dd8a33f00ed4_image.png'>						</div>
+					</li>
+					<li class="test-item" status="fail" author="" device="" tag="" test-id="2"> 
+						<div class="status-avatar fail-bg">
+							<i class="fa fa-times text-white"></i>
+						</div>
+						<div class="open-test">
+							<div class="test-detail"> 
+								<p class="name">InvalidContactUs_EmptyMessageField</p> 
+								<p class="duration text-sm">0h:0m:10s+276ms</p> 
+								<span class="datetime">21:15:59 PM</span>
+							</div>
+						</div>
+						<div class="test-contents d-none">
+							<div class="detail-head">
+								<div class="p-v-10 d-inline-block">	
+									<div class="info">
+										<h5 class="test-status text-fail">InvalidContactUs_EmptyMessageField</h5>
+										<span class='badge badge-success'>10/2/2024 9:15:59 PM</span>
+										<span class='badge badge-danger'>10/2/2024 9:16:09 PM</span>
+										<span class='badge badge-default'>0h:0m:10s+276ms</span>
+									</div>
+																		<div class="m-t-10 m-l-5">
+										verify that on empty message  to contact form
+									</div>
+								</div>
+							</div>
+<div class="detail-body mt-4">												
+	
+<table class="table table-sm">
+	<thead><tr>
+		<th class="status-col">Status</th>
+		<th class="timestamp-col">Timestamp</th>
+		<th class="details-col">Details</th>
+	</tr></thead>
+	<tbody>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>21:15:59</td>
+				<td>
+Navigate Successfully									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>21:15:59</td>
+				<td>
+readExcel Successfully									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>21:16:07</td>
+				<td>
+FillForm Successfully									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-times text-fail"></i></td>
+				<td>21:16:09</td>
+				<td>
+Assert.IsFalse failed.									</td>
+			</tr>
+	</tbody>
+</table>
+
+</div>    
+<img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='C:\Users\HP\Desktop\ScreenShots\a7dd2dbc-71cd-4be5-987e-faceeb330732_image.png' src='C:\Users\HP\Desktop\ScreenShots\a7dd2dbc-71cd-4be5-987e-faceeb330732_image.png' data-src='C:\Users\HP\Desktop\ScreenShots\a7dd2dbc-71cd-4be5-987e-faceeb330732_image.png'>						</div>
+					</li>
+					<li class="test-item" status="fail" author="" device="" tag="" test-id="3"> 
+						<div class="status-avatar fail-bg">
+							<i class="fa fa-times text-white"></i>
+						</div>
+						<div class="open-test">
+							<div class="test-detail"> 
+								<p class="name">TestInvalidContactUs_EmptyNameField</p> 
+								<p class="duration text-sm">0h:0m:10s+460ms</p> 
+								<span class="datetime">21:16:09 PM</span>
+							</div>
+						</div>
+						<div class="test-contents d-none">
+							<div class="detail-head">
+								<div class="p-v-10 d-inline-block">	
+									<div class="info">
+										<h5 class="test-status text-fail">TestInvalidContactUs_EmptyNameField</h5>
+										<span class='badge badge-success'>10/2/2024 9:16:09 PM</span>
+										<span class='badge badge-danger'>10/2/2024 9:16:19 PM</span>
+										<span class='badge badge-default'>0h:0m:10s+460ms</span>
+									</div>
+																		<div class="m-t-10 m-l-5">
+										verify that on passing empty to name field to contact form
+									</div>
+								</div>
+							</div>
+<div class="detail-body mt-4">												
+	
+<table class="table table-sm">
+	<thead><tr>
+		<th class="status-col">Status</th>
+		<th class="timestamp-col">Timestamp</th>
+		<th class="details-col">Details</th>
+	</tr></thead>
+	<tbody>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>21:16:09</td>
+				<td>
+Navigate Successfully									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>21:16:09</td>
+				<td>
+readExcel Successfully									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>21:16:17</td>
+				<td>
+FillForm Successfully									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-times text-fail"></i></td>
+				<td>21:16:19</td>
+				<td>
+Assert.IsFalse failed.									</td>
+			</tr>
+	</tbody>
+</table>
+
+</div>    
+<img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='C:\Users\HP\Desktop\ScreenShots\5952e466-9c5f-4f9e-9d8a-349e1033a822_image.png' src='C:\Users\HP\Desktop\ScreenShots\5952e466-9c5f-4f9e-9d8a-349e1033a822_image.png' data-src='C:\Users\HP\Desktop\ScreenShots\5952e466-9c5f-4f9e-9d8a-349e1033a822_image.png'>						</div>
+					</li>
+					<li class="test-item" status="fail" author="" device="" tag="" test-id="4"> 
+						<div class="status-avatar fail-bg">
+							<i class="fa fa-times text-white"></i>
+						</div>
+						<div class="open-test">
+							<div class="test-detail"> 
+								<p class="name">InvalidContactUs_EmptyPhonelField</p> 
+								<p class="duration text-sm">0h:0m:10s+606ms</p> 
+								<span class="datetime">21:16:20 PM</span>
+							</div>
+						</div>
+						<div class="test-contents d-none">
+							<div class="detail-head">
+								<div class="p-v-10 d-inline-block">	
+									<div class="info">
+										<h5 class="test-status text-fail">InvalidContactUs_EmptyPhonelField</h5>
+										<span class='badge badge-success'>10/2/2024 9:16:20 PM</span>
+										<span class='badge badge-danger'>10/2/2024 9:16:30 PM</span>
+										<span class='badge badge-default'>0h:0m:10s+606ms</span>
+									</div>
+																		<div class="m-t-10 m-l-5">
+										verify that on EmptyPhonelField  to contact form
+									</div>
+								</div>
+							</div>
+<div class="detail-body mt-4">												
+	
+<table class="table table-sm">
+	<thead><tr>
+		<th class="status-col">Status</th>
+		<th class="timestamp-col">Timestamp</th>
+		<th class="details-col">Details</th>
+	</tr></thead>
+	<tbody>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>21:16:20</td>
+				<td>
+Navigate Successfully									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>21:16:20</td>
+				<td>
+readExcel Successfully									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>21:16:28</td>
+				<td>
+FillForm Successfully									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-times text-fail"></i></td>
+				<td>21:16:30</td>
+				<td>
+Assert.IsFalse failed.									</td>
+			</tr>
+	</tbody>
+</table>
+
+</div>    
+<img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='C:\Users\HP\Desktop\ScreenShots\117e306b-77ed-445f-9dad-45d045813f23_image.png' src='C:\Users\HP\Desktop\ScreenShots\117e306b-77ed-445f-9dad-45d045813f23_image.png' data-src='C:\Users\HP\Desktop\ScreenShots\117e306b-77ed-445f-9dad-45d045813f23_image.png'>						</div>
+					</li>
+					<li class="test-item" status="fail" author="" device="" tag="" test-id="5"> 
+						<div class="status-avatar fail-bg">
+							<i class="fa fa-times text-white"></i>
+						</div>
+						<div class="open-test">
+							<div class="test-detail"> 
+								<p class="name">InvalidContactUs_EmptySubjectField</p> 
+								<p class="duration text-sm">0h:0m:10s+698ms</p> 
+								<span class="datetime">21:16:30 PM</span>
+							</div>
+						</div>
+						<div class="test-contents d-none">
+							<div class="detail-head">
+								<div class="p-v-10 d-inline-block">	
+									<div class="info">
+										<h5 class="test-status text-fail">InvalidContactUs_EmptySubjectField</h5>
+										<span class='badge badge-success'>10/2/2024 9:16:30 PM</span>
+										<span class='badge badge-danger'>10/2/2024 9:16:41 PM</span>
+										<span class='badge badge-default'>0h:0m:10s+698ms</span>
+									</div>
+																		<div class="m-t-10 m-l-5">
+										verify that on empty subject field  to contact form
+									</div>
+								</div>
+							</div>
+<div class="detail-body mt-4">												
+	
+<table class="table table-sm">
+	<thead><tr>
+		<th class="status-col">Status</th>
+		<th class="timestamp-col">Timestamp</th>
+		<th class="details-col">Details</th>
+	</tr></thead>
+	<tbody>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>21:16:31</td>
+				<td>
+Navigate Successfully									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>21:16:31</td>
+				<td>
+readExcel Successfully									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>21:16:39</td>
+				<td>
+FillForm Successfully									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-times text-fail"></i></td>
+				<td>21:16:41</td>
+				<td>
+Assert.IsFalse failed.									</td>
+			</tr>
+	</tbody>
+</table>
+
+</div>    
+<img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='C:\Users\HP\Desktop\ScreenShots\78241a99-cc4b-488f-b902-9c29e2dfad9c_image.png' src='C:\Users\HP\Desktop\ScreenShots\78241a99-cc4b-488f-b902-9c29e2dfad9c_image.png' data-src='C:\Users\HP\Desktop\ScreenShots\78241a99-cc4b-488f-b902-9c29e2dfad9c_image.png'>						</div>
+					</li>
+					<li class="test-item" status="fail" author="" device="" tag="" test-id="6"> 
+						<div class="status-avatar fail-bg">
+							<i class="fa fa-times text-white"></i>
+						</div>
+						<div class="open-test">
+							<div class="test-detail"> 
+								<p class="name">InvalidContactUs_InvalidEmailFormat</p> 
+								<p class="duration text-sm">0h:0m:10s+125ms</p> 
+								<span class="datetime">21:16:41 PM</span>
+							</div>
+						</div>
+						<div class="test-contents d-none">
+							<div class="detail-head">
+								<div class="p-v-10 d-inline-block">	
+									<div class="info">
+										<h5 class="test-status text-fail">InvalidContactUs_InvalidEmailFormat</h5>
+										<span class='badge badge-success'>10/2/2024 9:16:41 PM</span>
+										<span class='badge badge-danger'>10/2/2024 9:16:51 PM</span>
+										<span class='badge badge-default'>0h:0m:10s+125ms</span>
+									</div>
+																		<div class="m-t-10 m-l-5">
+										verify that on passing invalid email format  to contact form
+									</div>
+								</div>
+							</div>
+<div class="detail-body mt-4">												
+	
+<table class="table table-sm">
+	<thead><tr>
+		<th class="status-col">Status</th>
+		<th class="timestamp-col">Timestamp</th>
+		<th class="details-col">Details</th>
+	</tr></thead>
+	<tbody>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>21:16:41</td>
+				<td>
+Navigate Successfully									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>21:16:41</td>
+				<td>
+readExcel Successfully									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>21:16:49</td>
+				<td>
+FillForm Successfully									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-times text-fail"></i></td>
+				<td>21:16:51</td>
+				<td>
+Assert.IsFalse failed.									</td>
+			</tr>
+	</tbody>
+</table>
+
+</div>    
+<img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='C:\Users\HP\Desktop\ScreenShots\297f02d1-3813-4aed-a630-32ce43b16406_image.png' src='C:\Users\HP\Desktop\ScreenShots\297f02d1-3813-4aed-a630-32ce43b16406_image.png' data-src='C:\Users\HP\Desktop\ScreenShots\297f02d1-3813-4aed-a630-32ce43b16406_image.png'>						</div>
+					</li>
+					<li class="test-item" status="fail" author="" device="" tag="" test-id="7"> 
+						<div class="status-avatar fail-bg">
+							<i class="fa fa-times text-white"></i>
+						</div>
+						<div class="open-test">
+							<div class="test-detail"> 
+								<p class="name">InvalidContactUs_MessageMore500Charachter</p> 
+								<p class="duration text-sm">0h:0m:11s+591ms</p> 
+								<span class="datetime">21:16:51 PM</span>
+							</div>
+						</div>
+						<div class="test-contents d-none">
+							<div class="detail-head">
+								<div class="p-v-10 d-inline-block">	
+									<div class="info">
+										<h5 class="test-status text-fail">InvalidContactUs_MessageMore500Charachter</h5>
+										<span class='badge badge-success'>10/2/2024 9:16:51 PM</span>
+										<span class='badge badge-danger'>10/2/2024 9:17:03 PM</span>
+										<span class='badge badge-default'>0h:0m:11s+591ms</span>
+									</div>
+																		<div class="m-t-10 m-l-5">
+										verify that on message more than 500 charchter  to contact form
+									</div>
+								</div>
+							</div>
+<div class="detail-body mt-4">												
+	
+<table class="table table-sm">
+	<thead><tr>
+		<th class="status-col">Status</th>
+		<th class="timestamp-col">Timestamp</th>
+		<th class="details-col">Details</th>
+	</tr></thead>
+	<tbody>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>21:16:51</td>
+				<td>
+Navigate Successfully									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>21:16:51</td>
+				<td>
+readExcel Successfully									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>21:17:00</td>
+				<td>
+FillForm Successfully									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>21:17:02</td>
+				<td>
+Actual URL  equal the expected URL SuccessfullyTC10									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-times text-fail"></i></td>
+				<td>21:17:03</td>
+				<td>
+no such element: Unable to locate element: {"method":"xpath","selector":"//div/button[@type='submit']"}
+  (Session info: chrome=129.0.6668.89); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception									</td>
+			</tr>
+	</tbody>
+</table>
+
+</div>    
+<img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='C:\Users\HP\Desktop\ScreenShots\e22bf8d3-e809-4532-b17b-828e6cba3035_image.png' src='C:\Users\HP\Desktop\ScreenShots\e22bf8d3-e809-4532-b17b-828e6cba3035_image.png' data-src='C:\Users\HP\Desktop\ScreenShots\e22bf8d3-e809-4532-b17b-828e6cba3035_image.png'>						</div>
+					</li>
+					<li class="test-item" status="fail" author="" device="" tag="" test-id="8"> 
+						<div class="status-avatar fail-bg">
+							<i class="fa fa-times text-white"></i>
+						</div>
+						<div class="open-test">
+							<div class="test-detail"> 
+								<p class="name">TestInvalidContactUs_NameSpicalCharachter</p> 
+								<p class="duration text-sm">0h:0m:10s+100ms</p> 
+								<span class="datetime">21:17:03 PM</span>
+							</div>
+						</div>
+						<div class="test-contents d-none">
+							<div class="detail-head">
+								<div class="p-v-10 d-inline-block">	
+									<div class="info">
+										<h5 class="test-status text-fail">TestInvalidContactUs_NameSpicalCharachter</h5>
+										<span class='badge badge-success'>10/2/2024 9:17:03 PM</span>
+										<span class='badge badge-danger'>10/2/2024 9:17:13 PM</span>
+										<span class='badge badge-default'>0h:0m:10s+100ms</span>
+									</div>
+																		<div class="m-t-10 m-l-5">
+										verify that on passing invalid name to contact form
+									</div>
+								</div>
+							</div>
+<div class="detail-body mt-4">												
+	
+<table class="table table-sm">
+	<thead><tr>
+		<th class="status-col">Status</th>
+		<th class="timestamp-col">Timestamp</th>
+		<th class="details-col">Details</th>
+	</tr></thead>
+	<tbody>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>21:17:03</td>
+				<td>
+Navigate Successfully									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>21:17:03</td>
+				<td>
+readExcel Successfully									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>21:17:11</td>
+				<td>
+FillForm Successfully									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-times text-fail"></i></td>
+				<td>21:17:13</td>
+				<td>
+Assert.IsFalse failed.									</td>
+			</tr>
+	</tbody>
+</table>
+
+</div>    
+<img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='C:\Users\HP\Desktop\ScreenShots\444039d6-31b2-4eb7-87e6-184d237425d5_image.png' src='C:\Users\HP\Desktop\ScreenShots\444039d6-31b2-4eb7-87e6-184d237425d5_image.png' data-src='C:\Users\HP\Desktop\ScreenShots\444039d6-31b2-4eb7-87e6-184d237425d5_image.png'>						</div>
+					</li>
+					<li class="test-item" status="fail" author="" device="" tag="" test-id="9"> 
+						<div class="status-avatar fail-bg">
+							<i class="fa fa-times text-white"></i>
+						</div>
+						<div class="open-test">
+							<div class="test-detail"> 
+								<p class="name">InvalidContactUs_PhoneFieldWithCharachter</p> 
+								<p class="duration text-sm">0h:0m:10s+139ms</p> 
+								<span class="datetime">21:17:13 PM</span>
+							</div>
+						</div>
+						<div class="test-contents d-none">
+							<div class="detail-head">
+								<div class="p-v-10 d-inline-block">	
+									<div class="info">
+										<h5 class="test-status text-fail">InvalidContactUs_PhoneFieldWithCharachter</h5>
+										<span class='badge badge-success'>10/2/2024 9:17:13 PM</span>
+										<span class='badge badge-danger'>10/2/2024 9:17:23 PM</span>
+										<span class='badge badge-default'>0h:0m:10s+139ms</span>
+									</div>
+																		<div class="m-t-10 m-l-5">
+										verify that on invalid  phone format  to contact form
+									</div>
+								</div>
+							</div>
+<div class="detail-body mt-4">												
+	
+<table class="table table-sm">
+	<thead><tr>
+		<th class="status-col">Status</th>
+		<th class="timestamp-col">Timestamp</th>
+		<th class="details-col">Details</th>
+	</tr></thead>
+	<tbody>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>21:17:13</td>
+				<td>
+Navigate Successfully									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>21:17:13</td>
+				<td>
+readExcel Successfully									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>21:17:21</td>
+				<td>
+FillForm Successfully									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-times text-fail"></i></td>
+				<td>21:17:23</td>
+				<td>
+Assert.IsFalse failed.									</td>
+			</tr>
+	</tbody>
+</table>
+
+</div>    
+<img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='C:\Users\HP\Desktop\ScreenShots\bef61dbc-79cb-420a-9c11-da620c80b78b_image.png' src='C:\Users\HP\Desktop\ScreenShots\bef61dbc-79cb-420a-9c11-da620c80b78b_image.png' data-src='C:\Users\HP\Desktop\ScreenShots\bef61dbc-79cb-420a-9c11-da620c80b78b_image.png'>						</div>
+					</li>
+					<li class="test-item" status="fail" author="" device="" tag="" test-id="10"> 
+						<div class="status-avatar fail-bg">
+							<i class="fa fa-times text-white"></i>
+						</div>
+						<div class="open-test">
+							<div class="test-detail"> 
+								<p class="name">InvalidContactUs_SubjectMoreThan255Charachter</p> 
+								<p class="duration text-sm">0h:0m:11s+494ms</p> 
+								<span class="datetime">21:17:23 PM</span>
+							</div>
+						</div>
+						<div class="test-contents d-none">
+							<div class="detail-head">
+								<div class="p-v-10 d-inline-block">	
+									<div class="info">
+										<h5 class="test-status text-fail">InvalidContactUs_SubjectMoreThan255Charachter</h5>
+										<span class='badge badge-success'>10/2/2024 9:17:23 PM</span>
+										<span class='badge badge-danger'>10/2/2024 9:17:35 PM</span>
+										<span class='badge badge-default'>0h:0m:11s+494ms</span>
+									</div>
+																		<div class="m-t-10 m-l-5">
+										verify that SubjectMoreThan255Charachter  to contact form
+									</div>
+								</div>
+							</div>
+<div class="detail-body mt-4">												
+	
+<table class="table table-sm">
+	<thead><tr>
+		<th class="status-col">Status</th>
+		<th class="timestamp-col">Timestamp</th>
+		<th class="details-col">Details</th>
+	</tr></thead>
+	<tbody>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>21:17:24</td>
+				<td>
+Navigate Successfully									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>21:17:24</td>
+				<td>
+readExcel Successfully									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>21:17:32</td>
+				<td>
+FillForm Successfully									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>21:17:34</td>
+				<td>
+Actual URL  equal the expected URL SuccessfullyTC8									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-times text-fail"></i></td>
+				<td>21:17:35</td>
+				<td>
+no such element: Unable to locate element: {"method":"xpath","selector":"//div/button[@type='submit']"}
+  (Session info: chrome=129.0.6668.89); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception									</td>
+			</tr>
+	</tbody>
+</table>
+
+</div>    
+<img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='C:\Users\HP\Desktop\ScreenShots\5aa41c86-cfeb-4ec6-a48a-65e1b696cd8c_image.png' src='C:\Users\HP\Desktop\ScreenShots\5aa41c86-cfeb-4ec6-a48a-65e1b696cd8c_image.png' data-src='C:\Users\HP\Desktop\ScreenShots\5aa41c86-cfeb-4ec6-a48a-65e1b696cd8c_image.png'>						</div>
+					</li>
+					<li class="test-item" status="pass" author="" device="" tag="" test-id="11"> 
+						<div class="status-avatar pass-bg">
+							<i class="fa fa-check text-white"></i>
+						</div>
+						<div class="open-test">
+							<div class="test-detail"> 
+								<p class="name">TestSuccessContact</p> 
+								<p class="duration text-sm">0h:0m:10s+216ms</p> 
+								<span class="datetime">21:17:35 PM</span>
+							</div>
+						</div>
+						<div class="test-contents d-none">
+							<div class="detail-head">
+								<div class="p-v-10 d-inline-block">	
+									<div class="info">
+										<h5 class="test-status text-pass">TestSuccessContact</h5>
+										<span class='badge badge-success'>10/2/2024 9:17:35 PM</span>
+										<span class='badge badge-danger'>10/2/2024 9:17:45 PM</span>
+										<span class='badge badge-default'>0h:0m:10s+216ms</span>
+									</div>
+																		<div class="m-t-10 m-l-5">
+										verify that on passing valid data to contact form, the data added correctly
+									</div>
+								</div>
+							</div>
+<div class="detail-body mt-4">												
+	
+<table class="table table-sm">
+	<thead><tr>
+		<th class="status-col">Status</th>
+		<th class="timestamp-col">Timestamp</th>
+		<th class="details-col">Details</th>
+	</tr></thead>
+	<tbody>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>21:17:35</td>
+				<td>
+Navigate Successfully									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>21:17:35</td>
+				<td>
+readExcel Successfully									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-info text-info"></i></td>
+				<td>21:17:43</td>
+				<td>
+FillForm Successfully									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>21:17:45</td>
+				<td>
+ContactUs Successfully									</td>
+			</tr>
+	</tbody>
+</table>
+
+</div>    
+						</div>
+					</li>
+            </ul>    
+        </div>
+    </div>
+    <div class="test-content scrollable">
+        <div class="test-content-tools">
+            <ul>
+                <li>
+                    <a class="back-to-test" href="javascript:void(0)">
+                        <i class="fa fa-arrow-left"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="test-content-detail">
+            <div class="detail-body"></div>
+        </div>
+    </div>
+</div>
+										<div class="container-fluid p-4 dashboard-view">
+	<div class="row">
+		<div class="col-md-12">
+			<div class="card">
+				<div class="card-header">
+					<h6 class="card-title">Tests</h6>
+				</div>
+				<div class="card-body">
+	                <div class="">
+	                    <canvas id='parent-analysis' width='115' height='90'></canvas>
+	                </div>
+	            </div>
+	            <div class="card-footer">
+	                <div><small data-tooltip='9.090909090909092%'>
+	                    <b>1</b> tests passed
+                    </small></div>
+	                <div>
+	                    <small data-tooltip='90.9090909090909%'><b>10</b> tests failed, 
+	                    <b data-tooltip='0%'>0</b> others
+	                    </small>
+                    </div>
+	            </div>
+			</div>
+		</div>
+			</div>
+	<div class="row">
+		<div class="col-md-3">
+			<div class="card">
+				<div class="card-body box-height-150">
+	                <div class="media justify-content-between">
+						<div>
+							<h6 class="card-title">Tests</h6>
+							<h2 class="font-size-28 font-weight-light">11</h2>
+							<span class="text-semibold text-success font-size-15">
+							<i class="ti-arrow-up font-size-11"></i> 
+								<span>9.09%</span>
+							</span>
+						</div>
+						<div class="align-self-end">
+							<i class="fa fa-align-left font-size-70 opacity-01"></i>
+						</div>
+					</div>
+	            </div>
+			</div>
+		</div>
+		<div class="col-md-3">
+			<div class="card">
+				<div class="card-body box-height-150">
+	                <div class="media justify-content-between">
+						<div>
+							<h6 class="card-title">Start</h6>
+							<h6 class="font-weight-light">10/2/2024 9:15:43 PM</h6>
+							<span class="text-semibold text-success font-size-15">
+						</div>
+						<div class="align-self-end">
+							<i class="fa fa-clock-o font-size-70 text-success opacity-01"></i>
+						</div>
+					</div>
+	            </div>
+			</div>
+		</div>
+		<div class="col-md-3">
+			<div class="card">
+				<div class="card-body box-height-150">
+	                <div class="media justify-content-between">
+						<div>
+							<h6 class="card-title">Duration</h6>
+							<h6 class="font-weight-light">00:02:01.6430849</h6>
+							<span class="text-semibold text-danger font-size-15">
+						</div>
+						<div class="align-self-end">
+							<i class="fa fa-clock-o font-size-70 text-danger opacity-01"></i>
+						</div>
+					</div>
+	            </div>
+			</div>
+		</div>
+		<div class="col-md-3">
+			<div class="card">
+				<div class="card-body box-height-150">
+	                <div class="media justify-content-between">
+						<div>
+							<p class="">Duration</p>
+							<h6 class="font-weight-light">00:02:06.9477292</h6>
+							<span class="text-semibold font-size-15">
+						</div>
+						<div class="align-self-end">
+							<i class="fa fa-clock-o font-size-70 text-danger opacity-01"></i>
+						</div>
+					</div>
+	            </div>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+							</div>
+</div>
+<script>
+	var statusGroup = {
+    parentCount: 11,
+		passParent: 1,
+		failParent: 10,
+		fatalParent: 0,
+		errorParent: 0,
+		warningParent: 0,
+		skipParent: 0,
+		exceptionsParent: 10,
+		childCount: 0,
+		passChild: 0,
+		failChild: 0,
+		fatalChild: 0,
+		errorChild: 0,
+		warningChild: 0,
+		skipChild: 0,
+		infoChild: 0,
+		debugChild: 0,
+		exceptionsChild: 0,
+		grandChildCount: 0,
+		passGrandChild: 0,
+		failGrandChild: 0,
+		fatalGrandChild: 0,
+		errorGrandChild: 0,
+		warningGrandChild: 0,
+		skipGrandChild: 0,
+		infoGrandChild: 0,
+		debugGrandChild: 0,
+		exceptionsGrandChild: 0,
+	};
+</script>
+
+                </div>
+            </div>
+        </div>
+    </div>
+	<script src="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@cc89904c1a12065be1d08fc4994a258ef01b12bd/spark/js/scripts.js"></script>
+<script type='text/javascript'>
+	
+</script>
+</body>
+
+</html>
